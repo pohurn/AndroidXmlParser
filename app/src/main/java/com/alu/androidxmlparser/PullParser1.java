@@ -42,7 +42,7 @@ public class PullParser1 extends AppCompatActivity {
             String textInput = "<foo>Hello World!</foo>";
             String textOutput = "";
 
-            InitialTxtView.setText("Initial text is " + textInput);
+            InitialTxtView.setText("Initial text: \n" + textInput);
             xpp.setInput( new StringReader( textInput ) );
             int eventType = xpp.getEventType();
             while (eventType != XmlPullParser.END_DOCUMENT)
@@ -58,16 +58,20 @@ public class PullParser1 extends AppCompatActivity {
                     String temp = xpp.getName();
                     System.out.println("Start tag "+temp);
                     Log.e("MyTag","Start tag "+temp);
+
+                    OutputTxtView.setText(OutputTxtView.getText()+"\nStart tag : " + temp+"\n");
+                    OutputTxtView.setText(OutputTxtView.getText()+"-----------------------");
                 }
                 else
                 if(eventType == XmlPullParser.END_TAG)
                 {
                     String temp = xpp.getName();
                     System.out.println("End tag "+temp);
-
-
-
                     Log.e("MyTag","End tag "+temp);
+
+                    OutputTxtView.setText(OutputTxtView.getText()+"\nEnd tag : " + temp+"\n");
+                    OutputTxtView.setText(OutputTxtView.getText()+"-----------------------");
+
                 }
                 else
                 if(eventType == XmlPullParser.TEXT)
@@ -76,15 +80,13 @@ public class PullParser1 extends AppCompatActivity {
                     System.out.println("Text "+temp);
                     Log.e("MyTag","Text is "+temp);
 
-
-                    textOutput += temp + " || ";
+                    OutputTxtView.setText(OutputTxtView.getText()+"\nText is : " + temp+"\n");
+                    OutputTxtView.setText(OutputTxtView.getText()+"-----------------------");
                 }
 
                 eventType = xpp.next();
 
             } // End of while
-
-            OutputTxtView.setText(textOutput);
         }
         catch (XmlPullParserException ae1)
         {

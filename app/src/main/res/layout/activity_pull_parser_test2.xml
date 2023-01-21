@@ -26,8 +26,7 @@
                 android:layout_height="wrap_content"
                 android:lineBreakStyle="normal"
                 android:lineBreakWordStyle="phrase"
-                android:padding="30px"
-                android:text="kkknkcdl" />
+                android:padding="30px" />
         </TableRow>
 
         <TableRow

@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 break;
             case R.id.button3:
-
+                i = new Intent(MainActivity.this,PullParserTest3.class);
+                startActivity(i);
                 break;
             default:
                 break;
