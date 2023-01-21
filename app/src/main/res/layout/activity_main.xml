@@ -1,49 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Android XML Parser"
-        android:padding="20px"
+        android:text="Android XML Parser Examples"
+        android:padding="30px"
+        android:gravity="center_horizontal"
         android:textColor="@color/black"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049" />
+        android:layout_marginBottom="50dp"
+        android:textSize="25dp"/>
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="233dp"
-        android:background="@color/black"
-        android:textColor="@color/white"
-        android:layout_height="49dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="279dp" />
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width ="wrap_content"
+        android:layout_height ="wrap_content"
+        android:orientation ="vertical" >
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="233dp"
-        android:layout_height="49dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="419dp" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="35px"
+            android:backgroundTint="@color/black"
+            android:text="Pull Parser 1"
+            android:layout_marginBottom="30px"
+            android:textColor="@color/white"/>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="233dp"
-        android:layout_height="49dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="345dp" />
+        <Button
+            android:id="@+id/button3"
+            android:padding="35px"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30px"
+            android:textColor="@color/white"
+            android:text="Pull Parser 3" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/button2"
+            android:padding="35px"
+            android:backgroundTint="@color/material_dynamic_neutral60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Pull Parser 2"/>
+
+    </LinearLayout>
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
